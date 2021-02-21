@@ -1,0 +1,5 @@
+configs/*
+coverage/*
+utils/*
+node_modules/
+.vscode/

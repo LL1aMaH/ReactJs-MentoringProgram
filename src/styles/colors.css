@@ -1,0 +1,18 @@
+:root {
+  /* primary */
+
+  --primary-contrast-color: #fff;
+
+  /* secondary */
+
+  --secondary-contrast-color: #2d3746;
+  --secondary-dark-color: #cad7e1;
+
+  /* text */
+
+  --text-primary-color: #2d3746;
+
+  /* background */
+
+  /* error */
+}

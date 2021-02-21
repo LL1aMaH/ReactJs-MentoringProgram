@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules",
+    "stylelint-prettier/recommended"
+  ],
+  "ignoreFiles": ["!**/*.css"],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreProperties": ["composes"]
+      }
+    ],
+    "prettier/prettier": true,
+    "linebreaks": "unix"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "lib": ["dom", "esnext", "dom.iterable"],
+    "jsx": "react",
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "Components/*": ["src/components/*"],
+      "Views/*": ["src/views/*"],
+      "Consts/*": ["src/consts/*"],
+      "Utils/*": ["src/utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}
