@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  margin-top: 1rem;
+  background-color: var(--secondary-background-color);
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+.dropdown {
+  max-width: 12rem;
+}
+
+.button {
+  margin-right: 1rem;
+  font-size: 17px;
+}

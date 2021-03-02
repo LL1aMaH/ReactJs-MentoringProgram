@@ -1,0 +1,48 @@
+.container {
+  font-size: 0.875rem;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.disabledContainer .selectButton {
+  color: var(--disabled-color);
+  cursor: default;
+}
+
+.selectList {
+  position: absolute;
+  box-shadow: 0 1px 1px 1px var(--box-shadow-color);
+  border-radius: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  width: 100%;
+  z-index: 1;
+  top: 100%;
+  max-height: 21rem;
+  background-color: var(--secondary-background-color);
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropDown {
+  min-width: 18rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & span {
+    font-size: 20px;
+    color: var(--text-primary-color);
+    white-space: nowrap;
+  }
+}

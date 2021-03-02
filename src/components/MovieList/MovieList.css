@@ -1,0 +1,19 @@
+.list {
+  padding-top: 1rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 80px;
+  grid-auto-rows: 400px;
+}
+
+.container {
+  padding: 1rem 5rem;
+  margin-bottom: 4rem;
+
+  & span {
+    font-size: 20px;
+    color: var(--primary-font-color);
+  }
+}

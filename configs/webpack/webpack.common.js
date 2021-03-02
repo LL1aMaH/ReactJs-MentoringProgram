@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { compilerOptions } = require('../../tsconfig');
-const { getWebpackPathAliases } = require('../../utils/pathAliases');
+const { getWebpackPathAliases } = require('../utils/pathAliases');
 
 const rootDir = path.resolve(__dirname, '../../');
 const pathAliases = getWebpackPathAliases(compilerOptions.paths, rootDir);
@@ -15,6 +15,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jpg)$/,
+        use: ['file-loader'],
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',

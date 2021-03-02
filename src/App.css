@@ -13,10 +13,12 @@
 }
 
 :global(html) {
-  background-color: var(--primary-contrast-color);
-  color: var(--text-primary-color);
-  font-family: var(--main-font-family);
-  font-size: 16px;
+  background-color: var(--primary-background-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 * {

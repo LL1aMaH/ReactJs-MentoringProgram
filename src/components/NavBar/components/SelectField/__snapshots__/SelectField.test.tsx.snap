@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectField component does not open dropdown box on disabled component 1`] = `
+<DocumentFragment>
+  <div
+    class="dropDown"
+  >
+    <span>
+      SORT BY
+    </span>
+     
+    <div
+      class="container disabledContainer"
+    >
+      <button
+        class="selectButton dropdownClose button"
+        data-testid="selectButton"
+        tabindex="0"
+        type="button"
+      >
+        FILTER
+        <svg />
+      </button>
+      <ul
+        class="selectList close"
+      >
+        <li>
+          <button
+            class="option"
+            type="button"
+          >
+            RELEASE DATE
+          </button>
+        </li>
+        <li>
+          <button
+            class="option "
+            type="button"
+          >
+            FILTER
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectField component renders correctly 1`] = `
+<div
+  className="dropDown"
+>
+  <span>
+    SORT BY
+  </span>
+   
+  <div
+    className="container"
+  >
+    <button
+      className="selectButton dropdownClose button"
+      data-testid="selectButton"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      RELEASE DATE
+      <svg />
+    </button>
+    <ul
+      className="selectList close"
+    >
+      <li>
+        <button
+          className="option "
+          onClick={[Function]}
+          type="button"
+        >
+          RELEASE DATE
+        </button>
+      </li>
+      <li>
+        <button
+          className="option"
+          onClick={[Function]}
+          type="button"
+        >
+          FILTER
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`SelectField component renders open/close dropdown 1`] = `
+<DocumentFragment>
+  <div
+    class="dropDown"
+  >
+    <span>
+      SORT BY
+    </span>
+     
+    <div
+      class="container"
+    >
+      <button
+        class="selectButton dropdownOpen button"
+        data-testid="selectButton"
+        tabindex="0"
+        type="button"
+      >
+        RELEASE DATE
+        <svg />
+      </button>
+      <ul
+        class="selectList open"
+      >
+        <li>
+          <button
+            class="option "
+            type="button"
+          >
+            RELEASE DATE
+          </button>
+        </li>
+        <li>
+          <button
+            class="option"
+            type="button"
+          >
+            FILTER
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectField component renders open/close dropdown 2`] = `
+<DocumentFragment>
+  <div
+    class="dropDown"
+  >
+    <span>
+      SORT BY
+    </span>
+     
+    <div
+      class="container"
+    >
+      <button
+        class="selectButton dropdownClose button"
+        data-testid="selectButton"
+        tabindex="0"
+        type="button"
+      >
+        RELEASE DATE
+        <svg />
+      </button>
+      <ul
+        class="selectList close"
+      >
+        <li>
+          <button
+            class="option "
+            type="button"
+          >
+            RELEASE DATE
+          </button>
+        </li>
+        <li>
+          <button
+            class="option"
+            type="button"
+          >
+            FILTER
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;

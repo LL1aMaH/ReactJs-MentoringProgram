@@ -1,0 +1,25 @@
+.selectButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1rem;
+  padding: 0.125rem 0.5rem;
+  color: var(--primary-font-color);
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+}
+
+.dropdownOpen {
+  border: none;
+}
+
+.dropdownClose {
+  border: none;
+}
+
+.selectButton button {
+  color: inherit;
+  text-align: left;
+  width: 100%;
+}
