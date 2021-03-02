@@ -18,7 +18,8 @@
       "Components/*": ["src/components/*"],
       "Views/*": ["src/views/*"],
       "Consts/*": ["src/consts/*"],
-      "Utils/*": ["src/utils/*"]
+      "Utils/*": ["src/utils/*"],
+      "Assets/*": ["src/Assets/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]

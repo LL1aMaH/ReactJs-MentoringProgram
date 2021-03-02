@@ -1,5 +1,6 @@
 configs/
 coverage/
+dist/
 utils/*
 webpack.config.js
 postcss.config.js

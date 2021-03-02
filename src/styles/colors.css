@@ -1,7 +1,9 @@
 :root {
   /* primary */
 
-  --primary-contrast-color: #fff;
+  --primary-contrast-color: #424242;
+  --primary-link-color: #f65261;
+  --primary-font-color: #fff;
 
   /* secondary */
 
@@ -10,9 +12,19 @@
 
   /* text */
 
-  --text-primary-color: #2d3746;
+  --text-primary-color: #555;
 
   /* background */
 
+  --primary-background-color: #555;
+  --secondary-background-color: #232323;
+  --box-shadow-color: #e4e5e9;
+  --border-color: #ccd7e0;
+  --dropdown-hover: #f3f7cc;
+
   /* error */
+
+  /* disabled */
+
+  --disabled-color: #beccd8;
 }

@@ -1,7 +1,7 @@
 const path = require('path');
 
 const { compilerOptions } = require('../../tsconfig');
-const { getJestPathAliases } = require('../../utils/pathAliases');
+const { getJestPathAliases } = require('../utils/pathAliases');
 
 const rootDir = '../../';
 const mocksDir = '<rootDir>/configs/jest/__mocks__';
