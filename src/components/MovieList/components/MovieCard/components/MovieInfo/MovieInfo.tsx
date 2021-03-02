@@ -13,10 +13,10 @@ export const MovieInfo = (props: MovieCardProps): JSX.Element => {
   return (
     <div className={styles.card}>
       <div className={styles.info}>
-        <div className={styles.title}>{title}</div>
-        <div className={styles.genres}>{genres.join(' ')}</div>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.genres}>{genres.join(' ')}</p>
       </div>
-      <div className={styles.year}>{year}</div>
+      <p className={styles.year}>{year}</p>
     </div>
   );
 };

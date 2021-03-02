@@ -11,8 +11,8 @@ export const MovieList = (): JSX.Element => {
       genres: ['Drama', 'Music', 'Oscar winning Movie'],
       year: 1912,
     })
-    .map(({ title, genres, year }, index) => {
-      const key = index;
+    .map(({ title, genres, year }, i) => {
+      const key = i;
       return <MovieCard title={title} genres={genres} year={year} key={key} />;
     });
 
