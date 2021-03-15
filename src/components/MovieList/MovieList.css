@@ -15,5 +15,6 @@
   & span {
     font-size: 20px;
     color: var(--primary-font-color);
+    cursor: default;
   }
 }

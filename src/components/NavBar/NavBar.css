@@ -19,3 +19,11 @@
   margin-right: 1rem;
   font-size: 17px;
 }
+
+.selectOption {
+  background-color: var(--primary-link-color);
+}
+
+.label {
+  cursor: default;
+}

@@ -1,8 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-import { Button } from 'Components/Button';
+import { Logo } from 'Components/Logo';
 
+import { AddMovieModal } from '../Modals/AddMovieModal';
 import { SearchBox } from './components/SearchBox';
 
 import styles from './Preview.css';
@@ -19,10 +19,8 @@ export const Preview = (): JSX.Element => {
       />
       <div className={styles.previewContent}>
         <div className={styles.buttons}>
-          <a href="#">
-            <b>netflix</b>roulette
-          </a>
-          <Button className={styles.button}>+ ADD MOVIE</Button>
+          <Logo />
+          <AddMovieModal className={styles.button} />
         </div>
         <p>FIND YOUR MOVIE</p>
         <SearchBox className={styles.searchBox} />

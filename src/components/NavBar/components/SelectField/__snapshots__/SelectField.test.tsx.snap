@@ -5,10 +5,6 @@ exports[`SelectField component does not open dropdown box on disabled component 
   <div
     class="dropDown"
   >
-    <span>
-      SORT BY
-    </span>
-     
     <div
       class="container disabledContainer"
     >
@@ -50,10 +46,6 @@ exports[`SelectField component renders correctly 1`] = `
 <div
   className="dropDown"
 >
-  <span>
-    SORT BY
-  </span>
-   
   <div
     className="container"
   >
@@ -99,10 +91,6 @@ exports[`SelectField component renders open/close dropdown 1`] = `
   <div
     class="dropDown"
   >
-    <span>
-      SORT BY
-    </span>
-     
     <div
       class="container"
     >
@@ -145,10 +133,6 @@ exports[`SelectField component renders open/close dropdown 2`] = `
   <div
     class="dropDown"
   >
-    <span>
-      SORT BY
-    </span>
-     
     <div
       class="container"
     >

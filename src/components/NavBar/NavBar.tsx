@@ -23,6 +23,9 @@ export const NavBar = (): JSX.Element => {
         className={styles.dropdown}
         buttonClassName={styles.button}
         optionClassName={styles.button}
+        label="SORT BY"
+        selectedOptionClassName={styles.selectOption}
+        labelClassName={styles.label}
       />
     </div>
   );

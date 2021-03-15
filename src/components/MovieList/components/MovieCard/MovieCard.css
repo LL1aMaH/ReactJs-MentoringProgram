@@ -2,3 +2,59 @@
   width: 100%;
   height: 100%;
 }
+
+.icon,
+.buttons {
+  display: none;
+}
+
+.card {
+  position: relative;
+}
+
+.icon:hover {
+  position: relative;
+}
+
+.card:hover .icon {
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+  font-size: 20px;
+  background-color: var(--black-background-color);
+  color: var(--primary-font-color);
+  border-radius: 180%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  cursor: default;
+  margin: 0.5rem;
+  display: block;
+}
+
+.icon:hover .buttons {
+  display: block;
+  transform: rotate(-90deg);
+  right: -4.5rem;
+  top: -1rem;
+  border-radius: 4px;
+  background-color: var(--primary-background-color);
+  position: absolute;
+  margin-top: 2rem;
+}
+
+.button {
+  font-size: 15px;
+  margin: 0.5rem 0;
+  width: 100%;
+  padding-right: 4rem;
+  padding-left: 1rem;
+
+  &:first-child {
+    margin-top: 2rem;
+  }
+
+  &:hover {
+    background-color: var(--primary-link-color);
+  }
+}

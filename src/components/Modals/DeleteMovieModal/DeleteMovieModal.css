@@ -1,0 +1,38 @@
+.modal {
+  background-color: var(--black-background-color);
+  height: 20rem;
+  color: var(--primary-font-color);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+
+  & svg {
+    width: 3rem;
+    height: auto;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  & h1 {
+    padding-left: 2rem;
+    font-weight: 100;
+    cursor: default;
+  }
+
+  & p {
+    padding: 1rem 8rem 1rem 2rem;
+    font-size: 22px;
+    cursor: default;
+  }
+
+  & .button {
+    height: 3rem;
+    background-color: var(--primary-link-color);
+    border-radius: 4px;
+    font-size: 20px;
+    align-self: flex-end;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    margin-right: 3rem;
+  }
+}

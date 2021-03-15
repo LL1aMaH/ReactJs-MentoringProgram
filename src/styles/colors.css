@@ -13,11 +13,13 @@
   /* text */
 
   --text-primary-color: #555;
+  --text-secondary-color: #888;
 
   /* background */
 
   --primary-background-color: #555;
   --secondary-background-color: #232323;
+  --black-background-color: #191919;
   --box-shadow-color: #e4e5e9;
   --border-color: #ccd7e0;
   --dropdown-hover: #f3f7cc;
