@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { Button } from './Button';
+import { InputField } from './InputField';
 
-describe('Button', () => {
+describe('InputField', () => {
   it('renders correctly', () => {
-    const getComponent = () => render(<Button>Button text</Button>);
+    const getComponent = () => render(<InputField label="label" placeholder="placeholder" />);
 
     expect(getComponent().asFragment()).toMatchSnapshot();
   });
