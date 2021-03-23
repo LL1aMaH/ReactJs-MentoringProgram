@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxField component should render correctly checked component 1`] = `
+<DocumentFragment>
+  <div
+    class="container undefined"
+  >
+    <input
+      checked=""
+      class="checkboxField"
+      data-testid="checkbox"
+      id="test"
+      type="checkbox"
+      value=""
+    />
+    <span
+      class="checkMark"
+    />
+    <label
+      class="label"
+      for="test"
+    >
+      test
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CheckboxField component should render correctly disabled unchecked component 1`] = `
+<DocumentFragment>
+  <div
+    class="container undefined"
+  >
+    <input
+      class="checkboxField"
+      data-testid="checkbox"
+      disabled=""
+      id="test"
+      type="checkbox"
+      value=""
+    />
+    <span
+      class="checkMark"
+    />
+    <label
+      class="label disabled"
+      for="test"
+    >
+      test
+    </label>
+  </div>
+</DocumentFragment>
+`;

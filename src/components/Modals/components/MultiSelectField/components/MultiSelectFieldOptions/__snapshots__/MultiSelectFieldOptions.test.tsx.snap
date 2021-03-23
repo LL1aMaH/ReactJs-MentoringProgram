@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelectFieldOptions should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="layout"
+  >
+    <ul
+      class="options"
+    >
+      <li
+        class="option"
+      >
+        <div
+          class="container checkbox"
+        >
+          <input
+            class="checkboxField"
+            data-testid="checkbox"
+            id="Ann"
+            type="checkbox"
+            value=""
+          />
+          <span
+            class="checkMark"
+          />
+          <label
+            class="label"
+            for="Ann"
+          >
+            Ann
+          </label>
+        </div>
+      </li>
+      <li
+        class="option"
+      >
+        <div
+          class="container checkbox"
+        >
+          <input
+            class="checkboxField"
+            data-testid="checkbox"
+            id="Jack"
+            type="checkbox"
+            value=""
+          />
+          <span
+            class="checkMark"
+          />
+          <label
+            class="label"
+            for="Jack"
+          >
+            Jack
+          </label>
+        </div>
+      </li>
+      <li
+        class="option"
+      >
+        <div
+          class="container checkbox"
+        >
+          <input
+            class="checkboxField"
+            data-testid="checkbox"
+            id="Jason"
+            type="checkbox"
+            value=""
+          />
+          <span
+            class="checkMark"
+          />
+          <label
+            class="label"
+            for="Jason"
+          >
+            Jason
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

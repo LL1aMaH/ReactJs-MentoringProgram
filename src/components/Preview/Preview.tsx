@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Logo } from 'Components/Logo';
 
@@ -8,6 +8,11 @@ import { SearchBox } from './components/SearchBox';
 import styles from './Preview.css';
 
 export const Preview = (): JSX.Element => {
+  const [state, setState] = useState<string[]>([]);
+
+  const handleClick = (item: string[]) => {
+    setState([...item]);
+  };
   return (
     <>
       <div
@@ -20,7 +25,7 @@ export const Preview = (): JSX.Element => {
       <div className={styles.previewContent}>
         <div className={styles.buttons}>
           <Logo />
-          <AddMovieModal className={styles.button} />
+          <AddMovieModal className={styles.button} handleClick={handleClick} value={state} />
         </div>
         <p>FIND YOUR MOVIE</p>
         <SearchBox className={styles.searchBox} />

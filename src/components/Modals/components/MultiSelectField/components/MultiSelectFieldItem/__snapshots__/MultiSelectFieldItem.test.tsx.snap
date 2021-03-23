@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelectFieldItem should render correctly 1`] = `
+<DocumentFragment>
+  <li
+    class="option"
+  >
+    <div
+      class="container checkbox"
+    >
+      <input
+        checked=""
+        class="checkboxField"
+        data-testid="checkbox"
+        id="test"
+        type="checkbox"
+        value=""
+      />
+      <span
+        class="checkMark"
+      />
+      <label
+        class="label"
+        for="test"
+      >
+        label
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;

@@ -8,10 +8,10 @@ import useDropdown from './hooks/useDropdown/useDropdown';
 
 import styles from './SelectField.css';
 
-export type TSelectFieldProps<T> = {
+export type TSelectFieldProps = {
   options: Array<string>;
   disabled?: boolean;
-  onChange: (value: T) => void;
+  onChange: (value: string) => void;
   className?: string;
   label?: string;
   containerClassName?: string;
@@ -22,7 +22,7 @@ export type TSelectFieldProps<T> = {
   labelClassName?: string;
 };
 
-function SelectFieldBase<T>(props: TSelectFieldProps<T>): JSX.Element {
+export const SelectField = memo(function SelectField(props: TSelectFieldProps): JSX.Element {
   const {
     options,
     onChange,
@@ -99,6 +99,4 @@ function SelectFieldBase<T>(props: TSelectFieldProps<T>): JSX.Element {
       </div>
     </div>
   );
-}
-
-export const SelectField = memo(SelectFieldBase) as typeof SelectFieldBase;
+});

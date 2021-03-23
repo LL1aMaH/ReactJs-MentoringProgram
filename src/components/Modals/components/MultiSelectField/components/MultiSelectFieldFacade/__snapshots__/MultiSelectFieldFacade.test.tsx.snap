@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelectFieldFacade should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="layout"
+    data-testid="multi-select-field-facade"
+    role="presentation"
+  >
+    <div
+      class="value"
+    >
+      children
+    </div>
+    <div
+      class="icons"
+    >
+      <svg
+        class="icon"
+        data-testid="arrow-icon"
+        tabindex="-1"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

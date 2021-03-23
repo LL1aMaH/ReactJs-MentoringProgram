@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import React, { memo, useMemo, useEffect, useCallback, ReactNode } from 'react';
+import React, { memo, useEffect, useCallback, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
 import FocusLock from 'react-focus-lock';
-import classnames from 'classnames';
 
 import styles from './Modal.css';
 
@@ -28,13 +27,9 @@ export const Modal = memo(function Modal(props: TModalProps): JSX.Element {
     backgroundClassName: customBackgroundClassName,
   } = props;
 
-  const layoutClassName = useMemo(() => classnames(styles.layout, customBackgroundClassName), [
-    customBackgroundClassName,
-  ]);
+  const layoutClassName = `${styles.layout} ${customBackgroundClassName}`;
 
-  const contentClassName = useMemo(() => classnames(styles.content, customContentClassName), [
-    customContentClassName,
-  ]);
+  const contentClassName = `${styles.content}  ${customContentClassName}`;
 
   const handleBackgroundClick = useCallback(
     (e) => {

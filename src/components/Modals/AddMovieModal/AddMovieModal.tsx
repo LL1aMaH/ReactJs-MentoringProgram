@@ -3,89 +3,95 @@ import { Button } from 'Components/Button';
 import { InputField } from 'Components/InputField';
 import { Modal } from 'Components/Modal';
 
-import { SelectField } from 'Components/NavBar/components/SelectField';
-
 import Close from 'Assets/icons/close.svg';
 
-import classnames from 'classnames';
+import { MultiSelectField } from '../components/MultiSelectField';
+
 import styles from './AddMovieModal.css';
 
 export type AddMovieModalProps = {
   className?: string;
+  handleClick: (arr: Array<string>) => void;
+  value: Array<string>;
 };
 
 export type AddMovieModalComponentProps = {
   onCancel: () => void;
+  handleClick: (arr: Array<string>) => void;
+  value: Array<string>;
 };
 
-const AddMovieModalComponent = ({ onCancel }: AddMovieModalComponentProps) => (
-  <div className={styles.modal}>
-    <Close onClick={onCancel} />
-    <p>ADD MOVIE</p>
-    <InputField
-      placeholder="Moana"
-      label="TITLE"
-      labelClassName={styles.label}
-      className={styles.field}
-    />
-    <InputField
-      placeholder="Select Data"
-      label="RELEASE DATA"
-      labelClassName={styles.label}
-      className={styles.field}
-    />
-    <InputField
-      placeholder="Movie URL here"
-      label="MOVIE URL"
-      labelClassName={styles.label}
-      className={styles.field}
-    />
-    <SelectField
-      options={['Crime', 'Documentary', 'Horror', 'Comedy']}
-      onChange={(val) => console.log(val)}
-      label="GENRE"
-      containerClassName={styles.containerSelectField}
-      className={styles.selectField}
-      buttonClassName={styles.selectButton}
-      optionListClassName={styles.optionList}
-      optionClassName={classnames(styles.selectButton, styles.option)}
-      labelClassName={styles.label}
-    />
-    <InputField
-      placeholder="Overview text goes here"
-      label="OVERVIEW"
-      labelClassName={styles.label}
-      className={styles.field}
-    />
-    <InputField
-      placeholder="Runtime Text Goes here"
-      label="RUNTIME"
-      labelClassName={styles.label}
-      className={styles.field}
-    />
-    <div className={styles.buttons}>
-      <Button className={styles.button}>RESET</Button>
-      <Button className={styles.button} onClick={onCancel}>
-        SUBMIT
-      </Button>
+const AddMovieModalComponent = ({ onCancel, value, handleClick }: AddMovieModalComponentProps) => {
+  return (
+    <div className={styles.modal}>
+      <Close onClick={onCancel} />
+      <p>ADD MOVIE</p>
+      <InputField
+        placeholder="Moana"
+        label="TITLE"
+        labelClassName={styles.label}
+        className={styles.field}
+      />
+      <InputField
+        placeholder="Select Data"
+        label="RELEASE DATA"
+        labelClassName={styles.label}
+        className={styles.field}
+      />
+      <InputField
+        placeholder="Movie URL here"
+        label="MOVIE URL"
+        labelClassName={styles.label}
+        className={styles.field}
+      />
+      <MultiSelectField
+        options={['Crime', 'Documentary', 'Horror', 'Comedy']}
+        value={value}
+        onChange={handleClick}
+        placeholder="Select Genre"
+        className={styles.multiSelect}
+        label="GENRE"
+        labelClassName={styles.label}
+      />
+      <InputField
+        placeholder="Overview text goes here"
+        label="OVERVIEW"
+        labelClassName={styles.label}
+        className={styles.field}
+      />
+      <InputField
+        placeholder="Runtime Text Goes here"
+        label="RUNTIME"
+        labelClassName={styles.label}
+        className={styles.field}
+      />
+      <div className={styles.buttons}>
+        <Button className={styles.button}>RESET</Button>
+        <Button className={styles.button} onClick={onCancel}>
+          SUBMIT
+        </Button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-export const AddMovieModal = ({ className }: AddMovieModalProps): JSX.Element => {
+export const AddMovieModal = ({
+  className,
+  handleClick,
+  value,
+}: AddMovieModalProps): JSX.Element => {
   const [isOpen, setOpen] = useState(false);
 
   const handleClose = useCallback(() => {
     setOpen(!isOpen);
   }, [isOpen]);
-
   return (
     <>
       <Button onClick={handleClose} className={className}>
         + ADD MOVIE
       </Button>
       <Modal open={isOpen} onClose={handleClose}>
-        <AddMovieModalComponent onCancel={handleClose} />
+        <AddMovieModalComponent onCancel={handleClose} handleClick={handleClick} value={value} />
       </Modal>
     </>
   );

@@ -2,7 +2,7 @@
 
 exports[`Modal should render correctly 1`] = `
 <div
-  class="layout"
+  class="layout undefined"
   data-testid="modal"
   role="presentation"
 >
