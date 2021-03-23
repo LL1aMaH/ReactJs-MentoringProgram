@@ -8,27 +8,33 @@ import useDropdown from './hooks/useDropdown/useDropdown';
 
 import styles from './SelectField.css';
 
-export type TSelectFieldProps<T> = {
+export type TSelectFieldProps = {
   options: Array<string>;
   disabled?: boolean;
-  onChange: (value: T) => void;
+  onChange: (value: string) => void;
   className?: string;
+  label?: string;
+  containerClassName?: string;
   buttonClassName?: string;
   optionClassName?: string;
   optionListClassName?: string;
   selectedOptionClassName?: string;
+  labelClassName?: string;
 };
 
-function SelectFieldBase<T>(props: TSelectFieldProps<T>): JSX.Element {
+export const SelectField = memo(function SelectField(props: TSelectFieldProps): JSX.Element {
   const {
     options,
     onChange,
     disabled = false,
     className,
+    label,
+    containerClassName,
     buttonClassName,
     optionClassName,
     optionListClassName,
     selectedOptionClassName,
+    labelClassName,
   } = props;
 
   const { ref, isOpen, toggleDropdown, closeDropdown } = useDropdown();
@@ -65,9 +71,11 @@ function SelectFieldBase<T>(props: TSelectFieldProps<T>): JSX.Element {
     [styles.close]: !isOpen,
   });
 
+  const droptDownClassName = classnames(styles.dropDown, containerClassName);
+
   return (
-    <div className={styles.dropDown}>
-      <span>SORT BY</span>{' '}
+    <div className={droptDownClassName}>
+      {label && <span className={labelClassName}>{label}</span>}
       <div className={layoutClassName} ref={ref}>
         <SelectButton
           label={selectedValue}
@@ -91,6 +99,4 @@ function SelectFieldBase<T>(props: TSelectFieldProps<T>): JSX.Element {
       </div>
     </div>
   );
-}
-
-export const SelectField = memo(SelectFieldBase) as typeof SelectFieldBase;
+});

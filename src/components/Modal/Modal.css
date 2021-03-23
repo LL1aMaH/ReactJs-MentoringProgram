@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(36, 43, 54, 0.7);
+  z-index: 10;
+  animation: softAppear 200ms;
+}
+
+.content {
+  margin: auto 0;
+  max-width: 100%;
+}
+
+.scrollLock {
+  overflow: hidden;
+}
+
+@keyframes softAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

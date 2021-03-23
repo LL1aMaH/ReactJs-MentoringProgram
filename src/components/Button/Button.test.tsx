@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { Button } from './Button';
 
-describe('Button component', () => {
+describe('Button', () => {
   it('renders correctly', () => {
     const getComponent = () => render(<Button>Button text</Button>);
 
