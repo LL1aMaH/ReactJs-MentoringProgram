@@ -10,6 +10,8 @@
 
 .card {
   position: relative;
+  max-width: 18rem;
+  cursor: pointer;
 }
 
 .icon:hover {

@@ -15,6 +15,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-right: 0.5rem;
 }
 
 .year {
@@ -29,4 +30,8 @@ p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.title {
+  font-size: 1.5rem;
 }

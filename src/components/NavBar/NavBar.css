@@ -18,6 +18,7 @@
 .button {
   margin-right: 1rem;
   font-size: 17px;
+  border-bottom: 2px solid transparent;
 }
 
 .selectOption {
@@ -26,4 +27,13 @@
 
 .label {
   cursor: default;
+}
+
+.activeButton {
+  border-bottom: 2px solid var(--primary-font-color);
+}
+
+.select {
+  margin-right: 1rem;
+  font-size: 17px;
 }

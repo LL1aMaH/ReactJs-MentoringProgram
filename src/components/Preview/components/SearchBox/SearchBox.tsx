@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { Button } from 'Components/Button';
 
@@ -10,7 +10,7 @@ export type SearchBoxProps = {
   className?: string;
 };
 
-export const SearchBox = (props: SearchBoxProps): JSX.Element => {
+export const SearchBox = memo(function SearchBox(props: SearchBoxProps): JSX.Element {
   const { className } = props;
   const searchBoxClassName = classnames(styles.searchBox, className);
   return (
@@ -19,4 +19,4 @@ export const SearchBox = (props: SearchBoxProps): JSX.Element => {
       <Button className={styles.button}>SEARCH</Button>
     </div>
   );
-};
+});

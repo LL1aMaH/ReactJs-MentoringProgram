@@ -1,7 +1,10 @@
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
+
+import { InputField, EType } from 'Components/InputField';
 import { Button } from 'Components/Button';
-import { InputField } from 'Components/InputField';
 import { Modal } from 'Components/Modal';
+
+import { GENRES } from 'Consts/index';
 
 import Close from 'Assets/icons/close.svg';
 
@@ -21,13 +24,17 @@ export type AddMovieModalComponentProps = {
   value: Array<string>;
 };
 
-const AddMovieModalComponent = ({ onCancel, value, handleClick }: AddMovieModalComponentProps) => {
+const AddMovieModalComponent = memo(function AddMovieModalComponent({
+  onCancel,
+  value,
+  handleClick,
+}: AddMovieModalComponentProps) {
   return (
     <div className={styles.modal}>
       <Close onClick={onCancel} />
       <p>ADD MOVIE</p>
       <InputField
-        placeholder="Moana"
+        placeholder="Title"
         label="TITLE"
         labelClassName={styles.label}
         className={styles.field}
@@ -37,6 +44,7 @@ const AddMovieModalComponent = ({ onCancel, value, handleClick }: AddMovieModalC
         label="RELEASE DATA"
         labelClassName={styles.label}
         className={styles.field}
+        type={EType.date}
       />
       <InputField
         placeholder="Movie URL here"
@@ -45,7 +53,7 @@ const AddMovieModalComponent = ({ onCancel, value, handleClick }: AddMovieModalC
         className={styles.field}
       />
       <MultiSelectField
-        options={['Crime', 'Documentary', 'Horror', 'Comedy']}
+        options={GENRES}
         value={value}
         onChange={handleClick}
         placeholder="Select Genre"
@@ -73,13 +81,13 @@ const AddMovieModalComponent = ({ onCancel, value, handleClick }: AddMovieModalC
       </div>
     </div>
   );
-};
+});
 
-export const AddMovieModal = ({
+export const AddMovieModal = memo(function AddMovieModal({
   className,
   handleClick,
   value,
-}: AddMovieModalProps): JSX.Element => {
+}: AddMovieModalProps): JSX.Element {
   const [isOpen, setOpen] = useState(false);
 
   const handleClose = useCallback(() => {
@@ -95,4 +103,4 @@ export const AddMovieModal = ({
       </Modal>
     </>
   );
-};
+});

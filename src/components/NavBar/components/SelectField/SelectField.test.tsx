@@ -38,18 +38,18 @@ describe('SelectField component', () => {
     const selected: HTMLElement = getByTestId('selectButton');
 
     fireEvent.click(selected);
-    const selectedValue = 'FILTER';
+    const selectedValue = 'RATING';
     const triggerToOpenSelectField: HTMLElement = getByText(selectedValue);
 
     fireEvent.click(triggerToOpenSelectField);
 
-    expect(selected.textContent).toBe('FILTER');
+    expect(selected.textContent).toBe('RATING');
   });
 
   it('does not open dropdown box on disabled component', () => {
     const { getByText, asFragment } = render(getComponent({ disabled: true }));
 
-    fireEvent.click(getByText('FILTER'));
+    fireEvent.click(getByText('RATING'));
 
     expect(asFragment()).toMatchSnapshot();
   });

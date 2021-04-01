@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { Modal } from 'Components/Modal';
 
 import Close from 'Assets/icons/close.svg';
@@ -9,16 +9,20 @@ export type SuccessfulAddMovieModalComponentProps = {
   onCancel: () => void;
 };
 
-const SuccessfulAddMovieModalComponent = ({ onCancel }: SuccessfulAddMovieModalComponentProps) => (
-  <div className={styles.modal}>
-    <Close onClick={onCancel} />
-    <div className={styles.check}>&#10004;</div>
-    <h1>CONGRATULATIONS !</h1>
-    <p>The movie has been added to database successfully</p>
-  </div>
-);
+const SuccessfulAddMovieModalComponent = memo(function SuccessfulAddMovieModalComponent({
+  onCancel,
+}: SuccessfulAddMovieModalComponentProps) {
+  return (
+    <div className={styles.modal}>
+      <Close onClick={onCancel} />
+      <div className={styles.check}>&#10004;</div>
+      <h1>CONGRATULATIONS !</h1>
+      <p>The movie has been added to database successfully</p>
+    </div>
+  );
+});
 
-export const SuccessfulAddMovieModal = (): JSX.Element => {
+export const SuccessfulAddMovieModal = memo(function SuccessfulAddMovieModal(): JSX.Element {
   const [isOpen, setOpen] = useState(true);
 
   const handleClose = useCallback(() => {
@@ -29,4 +33,4 @@ export const SuccessfulAddMovieModal = (): JSX.Element => {
       <SuccessfulAddMovieModalComponent onCancel={handleClose} />
     </Modal>
   );
-};
+});
