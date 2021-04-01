@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 
 import { Logo } from 'Components/Logo';
 
@@ -7,7 +7,7 @@ import { SearchBox } from './components/SearchBox';
 
 import styles from './Preview.css';
 
-export const Preview = (): JSX.Element => {
+export const Preview = memo(function Preview(): JSX.Element {
   const [state, setState] = useState<string[]>([]);
 
   const handleClick = (item: string[]) => {
@@ -32,4 +32,4 @@ export const Preview = (): JSX.Element => {
       </div>
     </>
   );
-};
+});

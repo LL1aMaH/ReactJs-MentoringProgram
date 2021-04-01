@@ -23,7 +23,7 @@
 .previewContent {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
 
   & p {
     color: var(--primary-font-color);
