@@ -1,5 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { memo, InputHTMLAttributes, useCallback } from 'react';
+import React, { memo, InputHTMLAttributes } from 'react';
+
+import { Field } from 'formik';
+
+import styles from './InputField.css';
 
 export enum EType {
   text = 'text',
@@ -11,39 +15,33 @@ export type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   inputClassName?: string;
   labelClassName?: string;
   disabled?: boolean;
-  onChange?: () => void;
+  onChange?: (e?: any) => void;
   type?: EType;
+  error?: any;
 };
 
 export const InputField = memo(function InputField(props: InputFieldProps): JSX.Element {
   const {
-    onChange,
     className,
     label,
     labelClassName,
     inputClassName,
     disabled,
     type = EType.text,
+    error,
     ...restProps
   } = props;
 
-  const handleChange = useCallback(
-    ({ target: { value: inputValue } }): void => {
-      if (onChange) {
-        onChange(inputValue);
-      }
-    },
-    [onChange],
-  );
   return (
     <div className={className}>
+      {error ? <div className={styles.warning}>{error}</div> : null}
       <span className={labelClassName}>{label}</span>
-      <input
+      <Field
         {...restProps}
         type={type}
         className={inputClassName}
         disabled={disabled}
-        onChange={handleChange}
+        autoComplete="off"
       />
     </div>
   );

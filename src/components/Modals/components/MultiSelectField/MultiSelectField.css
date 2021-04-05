@@ -1,6 +1,7 @@
 .layout {
   width: 100%;
   position: relative;
+  padding-top: 0.5rem;
 }
 
 .dropdown {
@@ -16,8 +17,4 @@
 
 .dropdownOpen {
   display: block;
-}
-
-.span {
-  margin-top: 2rem;
 }

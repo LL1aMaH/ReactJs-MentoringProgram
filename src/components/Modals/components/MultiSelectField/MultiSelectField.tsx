@@ -42,10 +42,11 @@ export const MultiSelectField = memo(function MultiSelectField(
     value,
     onChange,
   });
+
   return (
-    <>
-      <span className={`${labelClassName} ${styles.span}`}>{label}</span>
-      <div ref={refDropdown} className={classnames(styles.layout, className)}>
+    <div className={className}>
+      <span className={labelClassName}>{label}</span>
+      <div ref={refDropdown} className={styles.layout}>
         <MultiSelectFieldFacade onClick={toggleDropdown} active={isOpen}>
           {value.join() ? value.join(' ') : placeholder}
         </MultiSelectFieldFacade>
@@ -62,6 +63,6 @@ export const MultiSelectField = memo(function MultiSelectField(
           />
         </div>
       </div>
-    </>
+    </div>
   );
 });

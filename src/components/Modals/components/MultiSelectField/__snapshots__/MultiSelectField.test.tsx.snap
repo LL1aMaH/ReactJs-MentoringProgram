@@ -2,332 +2,332 @@
 
 exports[`MultiSelectField should render correctly 1`] = `
 <DocumentFragment>
-  <span
-    class="undefined span"
-  />
-  <div
-    class="layout"
-  >
+  <div>
+    <span />
     <div
       class="layout"
-      data-testid="multi-select-field-facade"
-      role="presentation"
-    >
-      <div
-        class="value"
-      >
-        Ann Jack
-      </div>
-      <div
-        class="icons"
-      >
-        <svg
-          class="icon"
-          data-testid="arrow-icon"
-          tabindex="-1"
-        />
-      </div>
-    </div>
-    <div
-      class="dropdown"
     >
       <div
         class="layout"
+        data-testid="multi-select-field-facade"
+        role="presentation"
       >
-        <ul
-          class="options"
+        <div
+          class="value"
         >
-          <li
-            class="option"
+          Ann Jack
+        </div>
+        <div
+          class="icons"
+        >
+          <svg
+            class="icon"
+            data-testid="arrow-icon"
+            tabindex="-1"
+          />
+        </div>
+      </div>
+      <div
+        class="dropdown"
+      >
+        <div
+          class="layout"
+        >
+          <ul
+            class="options"
           >
-            <div
-              class="container checkbox"
+            <li
+              class="option"
             >
-              <input
-                checked=""
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Ann"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Ann"
+              <div
+                class="container checkbox"
               >
-                Ann
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  checked=""
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Ann"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Ann"
+                >
+                  Ann
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                checked=""
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Jack"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Jack"
+              <div
+                class="container checkbox"
               >
-                Jack
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  checked=""
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Jack"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Jack"
+                >
+                  Jack
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Jason"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Jason"
+              <div
+                class="container checkbox"
               >
-                Jason
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Jason"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Jason"
+                >
+                  Jason
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Mary"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Mary"
+              <div
+                class="container checkbox"
               >
-                Mary
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Mary"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Mary"
+                >
+                  Mary
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Carlos"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Carlos"
+              <div
+                class="container checkbox"
               >
-                Carlos
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Carlos"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Carlos"
+                >
+                  Carlos
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Sara"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Sara"
+              <div
+                class="container checkbox"
               >
-                Sara
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Sara"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Sara"
+                >
+                  Sara
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Matt"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Matt"
+              <div
+                class="container checkbox"
               >
-                Matt
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Matt"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Matt"
+                >
+                  Matt
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Paul"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Paul"
+              <div
+                class="container checkbox"
               >
-                Paul
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Paul"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Paul"
+                >
+                  Paul
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Roberto"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Roberto"
+              <div
+                class="container checkbox"
               >
-                Roberto
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Roberto"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Roberto"
+                >
+                  Roberto
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Katherine"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Katherine"
+              <div
+                class="container checkbox"
               >
-                Katherine
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Katherine"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Katherine"
+                >
+                  Katherine
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Robby"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Robby"
+              <div
+                class="container checkbox"
               >
-                Robby
-              </label>
-            </div>
-          </li>
-          <li
-            class="option"
-          >
-            <div
-              class="container checkbox"
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Robby"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Robby"
+                >
+                  Robby
+                </label>
+              </div>
+            </li>
+            <li
+              class="option"
             >
-              <input
-                class="checkboxField"
-                data-testid="checkbox"
-                id="Diane"
-                type="checkbox"
-                value=""
-              />
-              <span
-                class="checkMark"
-              />
-              <label
-                class="label"
-                for="Diane"
+              <div
+                class="container checkbox"
               >
-                Diane
-              </label>
-            </div>
-          </li>
-        </ul>
+                <input
+                  class="checkboxField"
+                  data-testid="checkbox"
+                  id="Diane"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="checkMark"
+                />
+                <label
+                  class="label"
+                  for="Diane"
+                >
+                  Diane
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ export const initialState: TInitialState = {
   isLoading: false,
   genre: NAV_BAR_BUTTONS[0],
   sort: SORT_BY[0],
+  mainFilm: null,
 };
 
 const searchReducer = (state = initialState, action: any) => {
@@ -36,6 +37,11 @@ const searchReducer = (state = initialState, action: any) => {
       return {
         ...state,
         sort: action.payload,
+      };
+    case 'CHANGE_MAIN_FILM':
+      return {
+        ...state,
+        mainFilm: action.payload,
       };
     default:
       return state;

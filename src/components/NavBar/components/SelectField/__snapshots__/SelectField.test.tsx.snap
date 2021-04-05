@@ -12,7 +12,6 @@ exports[`SelectField component does not open dropdown box on disabled component 
         class="selectButton dropdownClose button"
         data-testid="selectButton"
         tabindex="0"
-        type="button"
       >
         RATING
         <svg />
@@ -55,7 +54,6 @@ exports[`SelectField component renders correctly 1`] = `
       disabled={false}
       onClick={[Function]}
       tabIndex={0}
-      type="button"
     >
       RELEASE DATE
       <svg />
@@ -98,7 +96,6 @@ exports[`SelectField component renders open/close dropdown 1`] = `
         class="selectButton dropdownOpen button"
         data-testid="selectButton"
         tabindex="0"
-        type="button"
       >
         RELEASE DATE
         <svg />
@@ -140,7 +137,6 @@ exports[`SelectField component renders open/close dropdown 2`] = `
         class="selectButton dropdownClose button"
         data-testid="selectButton"
         tabindex="0"
-        type="button"
       >
         RELEASE DATE
         <svg />

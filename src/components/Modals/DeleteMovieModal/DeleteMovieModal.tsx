@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Modal } from 'Components/Modal';
 
 import Close from 'Assets/icons/close.svg';
@@ -22,10 +22,7 @@ export type DeleteMovieModalComponentProps = {
   id: number;
 };
 
-const DeleteMovieModalComponent = memo(function DeleteMovieModalComponent({
-  onCancel,
-  id,
-}: DeleteMovieModalComponentProps) {
+const DeleteMovieModalComponent = ({ onCancel, id }: DeleteMovieModalComponentProps) => {
   const dispatch = useDispatch();
   const { activeButtonStart, sortStart } = useSelector(getStartButton);
   const handleClick = useCallback(() => {
@@ -43,11 +40,9 @@ const DeleteMovieModalComponent = memo(function DeleteMovieModalComponent({
       </Button>
     </div>
   );
-});
+};
 
-export const DeleteMovieModal = memo(function DeleteMovieModal({
-  id,
-}: TDeleteMovieModalProps): JSX.Element {
+export const DeleteMovieModal = ({ id }: TDeleteMovieModalProps): JSX.Element => {
   const [isOpen, setOpen] = useState(true);
 
   const handleClose = useCallback(() => {
@@ -64,4 +59,4 @@ export const DeleteMovieModal = memo(function DeleteMovieModal({
       </Modal>
     </>
   );
-});
+};
