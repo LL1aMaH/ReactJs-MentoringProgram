@@ -23,6 +23,7 @@
     font-size: 15px;
     color: var(--primary-link-color);
     cursor: default;
+    padding-top: 2rem;
   }
 
   & input {
@@ -35,7 +36,7 @@
     padding: 0 10px;
     margin-top: 0.5rem;
     &::placeholder {
-      color: var(--text-secondary-color);
+      color: black;
     }
 
     &:focus {
@@ -69,5 +70,5 @@
 }
 
 .multiSelect {
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }

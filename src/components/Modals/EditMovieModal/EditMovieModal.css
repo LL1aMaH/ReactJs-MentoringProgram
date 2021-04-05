@@ -112,3 +112,7 @@
     background-color: var(--black-background-color);
   }
 }
+
+.multiSelect {
+  margin-top: 2rem;
+}

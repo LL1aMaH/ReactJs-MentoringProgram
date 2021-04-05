@@ -5,7 +5,7 @@ import { Button } from './Button';
 
 describe('Button', () => {
   it('renders correctly', () => {
-    const getComponent = () => render(<Button>Button text</Button>);
+    const getComponent = () => render(<Button onClick={jest.fn}>Button text</Button>);
 
     expect(getComponent().asFragment()).toMatchSnapshot();
   });

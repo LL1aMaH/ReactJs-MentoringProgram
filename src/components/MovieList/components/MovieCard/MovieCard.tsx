@@ -33,7 +33,7 @@ export const MovieCard = memo(function MovieCard({ film }: MovieCardProps): JSX.
 
   return (
     <div className={styles.card}>
-      {showEditModal && <EditMovieModal film={film} />}
+      {showEditModal && <EditMovieModal value={film} />}
       {showDeleteModal && <DeleteMovieModal id={film.id} />}
       <div className={styles.icon}>
         &#8230;

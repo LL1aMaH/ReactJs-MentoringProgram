@@ -61,12 +61,6 @@
       "rules": {
         "prettier/prettier": "off"
       }
-    },
-    {
-      "files": "slice.ts",
-      "rules": {
-        "no-param-reassign": "off"
-      }
     }
   ]
 }
