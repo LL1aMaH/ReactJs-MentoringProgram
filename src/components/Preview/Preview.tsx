@@ -1,6 +1,8 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 
 import { Logo } from 'Components/Logo';
+
+import { SuccessfulAddMovieModal } from 'Components/Modals/SuccessfulAddMovieModal';
 
 import { AddMovieModal } from '../Modals/AddMovieModal';
 import { SearchBox } from './components/SearchBox';
@@ -8,6 +10,7 @@ import { SearchBox } from './components/SearchBox';
 import styles from './Preview.css';
 
 export const Preview = memo(function Preview(): JSX.Element {
+  const [showSuccessfulAddMovieModal, setShowSuccessfulAddMovieModal] = useState(false);
   return (
     <>
       <div
@@ -20,7 +23,11 @@ export const Preview = memo(function Preview(): JSX.Element {
       <div className={styles.previewContent}>
         <div className={styles.buttons}>
           <Logo />
-          <AddMovieModal className={styles.button} />
+          <AddMovieModal
+            className={styles.button}
+            setShowSuccessfulAddMovieModal={setShowSuccessfulAddMovieModal}
+          />
+          {showSuccessfulAddMovieModal && <SuccessfulAddMovieModal />}
         </div>
         <p>FIND YOUR MOVIE</p>
         <SearchBox className={styles.searchBox} />

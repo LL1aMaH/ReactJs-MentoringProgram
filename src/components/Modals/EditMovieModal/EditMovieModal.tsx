@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -34,10 +34,10 @@ export type TEditMovieModalProps = {
   value: TMovie;
 };
 
-const EditMovieModalComponent = memo(function EditMovieModalComponent({
+const EditMovieModalComponent = ({
   onCancel,
   value,
-}: TEditMovieModalComponentProps): JSX.Element {
+}: TEditMovieModalComponentProps): JSX.Element => {
   const correctValue = getCorrectValue(value);
   const [state, setState] = useState<string[]>(correctValue.genres);
 
@@ -138,11 +138,9 @@ const EditMovieModalComponent = memo(function EditMovieModalComponent({
       </Formik>
     </div>
   );
-});
+};
 
-export const EditMovieModal = memo(function EditMovieModal({
-  value,
-}: TEditMovieModalProps): JSX.Element {
+export const EditMovieModal = ({ value }: TEditMovieModalProps): JSX.Element => {
   const [isOpen, setOpen] = useState(true);
 
   const handleClose = useCallback(() => {
@@ -154,4 +152,4 @@ export const EditMovieModal = memo(function EditMovieModal({
       <EditMovieModalComponent onCancel={handleClose} value={value} />
     </Modal>
   );
-});
+};

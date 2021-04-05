@@ -9,7 +9,6 @@ import ErrorBoundary from 'Components/ErrorBoundary';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-// import { NAV_BAR_BUTTONS, SORT_BY } from 'Consts/index';
 import { getMovies } from '../../store/actions';
 
 import { getFilms, getStartButton } from '../../store/selectors';

@@ -26,6 +26,11 @@ const changeSortButton = (payload: any) => ({
   payload,
 });
 
+const changeMainFilm = (payload: any) => ({
+  type: 'CHANGE_MAIN_FILM',
+  payload,
+});
+
 export const getMovies = (genre: string, sort: string) => async (dispatch: Dispatch<any>) => {
   const queryString = getURL(genre, sort);
   dispatch(fetchMovies());
@@ -87,6 +92,19 @@ export const editMovie = (
     });
     if (response.status === 200) {
       dispatch(getMovies(activeButtonStart, sortStart));
+    }
+  } catch (error) {
+    console.warn(error);
+  }
+};
+
+export const movieDetails = (id: number) => async (dispatch: Dispatch<any>) => {
+  const queryString = `${DEFAULT_URL}/${id}`;
+  try {
+    const response = await fetch(queryString);
+    if (response.status === 200) {
+      const result = await response.json();
+      dispatch(changeMainFilm(result));
     }
   } catch (error) {
     console.warn(error);

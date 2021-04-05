@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { Dispatch, SetStateAction, useCallback, useState } from 'react';
 
 import { Formik, FormikHelpers, Form } from 'formik';
 
@@ -24,15 +24,18 @@ import styles from './AddMovieModal.css';
 
 export type AddMovieModalProps = {
   className?: string;
+  setShowSuccessfulAddMovieModal: Dispatch<SetStateAction<boolean>>;
 };
 
 export type AddMovieModalComponentProps = {
   onCancel: () => void;
+  setShowSuccessfulAddMovieModal: Dispatch<SetStateAction<boolean>>;
 };
 
-const AddMovieModalComponent = memo(function AddMovieModalComponent({
+const AddMovieModalComponent = ({
   onCancel,
-}: AddMovieModalComponentProps) {
+  setShowSuccessfulAddMovieModal,
+}: AddMovieModalComponentProps) => {
   const [state, setState] = useState<string[]>([]);
   const dispatch = useDispatch();
 
@@ -44,8 +47,10 @@ const AddMovieModalComponent = memo(function AddMovieModalComponent({
 
   const handleSubmitForm = (values: TAddMovie, { setSubmitting }: FormikHelpers<TAddMovie>) => {
     const correctValues = Object.assign(values, { genres: state });
+    correctValues.runtime = +correctValues.runtime;
     dispatch(addMovie(correctValues, activeButtonStart, sortStart));
     setSubmitting(false);
+    setShowSuccessfulAddMovieModal((visible) => !visible);
     onCancel();
   };
 
@@ -140,11 +145,12 @@ const AddMovieModalComponent = memo(function AddMovieModalComponent({
       </Formik>
     </div>
   );
-});
+};
 
-export const AddMovieModal = memo(function AddMovieModal({
+export const AddMovieModal = ({
   className,
-}: AddMovieModalProps): JSX.Element {
+  setShowSuccessfulAddMovieModal,
+}: AddMovieModalProps): JSX.Element => {
   const [isOpen, setOpen] = useState(false);
 
   const handleClose = useCallback(() => {
@@ -156,8 +162,11 @@ export const AddMovieModal = memo(function AddMovieModal({
         + ADD MOVIE
       </Button>
       <Modal open={isOpen} onClose={handleClose}>
-        <AddMovieModalComponent onCancel={handleClose} />
+        <AddMovieModalComponent
+          onCancel={handleClose}
+          setShowSuccessfulAddMovieModal={setShowSuccessfulAddMovieModal}
+        />
       </Modal>
     </>
   );
-});
+};

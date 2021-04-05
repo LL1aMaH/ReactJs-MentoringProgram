@@ -6,6 +6,7 @@ export type TInitialState = {
   isLoading: boolean;
   genre: string;
   sort: string;
+  mainFilm: TMovie | null;
 };
 
 export type TMovie = {
