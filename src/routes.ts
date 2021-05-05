@@ -1,10 +1,11 @@
-import NotFoundPage from 'Views/NotFoundPage';
-
 import MainPage from 'Views/MainPage';
+import MovieDetails from 'Views/MovieDetailsPage';
+import NotFoundPage from 'Views/NotFoundPage';
 
 export enum EPath {
   Main = '/',
   NotFound = '/404',
+  MovieDetailsPage = '/:movieID',
 }
 
 type TRoute = {
@@ -22,6 +23,11 @@ export const ROUTES: TRoute[] = [
   {
     path: EPath.NotFound,
     component: NotFoundPage,
+    exact: false,
+  },
+  {
+    path: EPath.MovieDetailsPage,
+    component: MovieDetails,
     exact: false,
   },
 ];

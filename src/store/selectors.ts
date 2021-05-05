@@ -6,3 +6,5 @@ export const getStartButton = (state: TInitialState): TStartButton => ({
   activeButtonStart: state.genre,
   sortStart: state.sort,
 });
+
+export const getFilmsDetails = (state: TInitialState): TMovie | null => state.mainFilm;
