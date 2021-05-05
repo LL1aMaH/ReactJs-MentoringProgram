@@ -3,6 +3,7 @@
 
 import { DEFAULT_URL } from 'Consts/index';
 import { Dispatch } from 'redux';
+
 import { getURL } from './helper/getURL';
 
 import { TAddMovie } from './types';
@@ -98,7 +99,7 @@ export const editMovie = (
   }
 };
 
-export const movieDetails = (id: number) => async (dispatch: Dispatch<any>) => {
+export const movieDetails = (id: string) => async (dispatch: Dispatch<any>) => {
   const queryString = `${DEFAULT_URL}/${id}`;
   try {
     const response = await fetch(queryString);
