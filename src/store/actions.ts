@@ -47,6 +47,19 @@ export const getMovies = (genre: string, sort: string) => async (dispatch: Dispa
   }
 };
 
+export const getSearchMovies = (value: string) => async (dispatch: Dispatch<any>) => {
+  const queryString = `${DEFAULT_URL}?search=${value}&searchBy=title`;
+  try {
+    const response = await fetch(queryString);
+    const result = await response.json();
+    dispatch(fetchSuccess(result));
+    dispatch(changeActiveButton('ALL'));
+    dispatch(changeSortButton('RELEASE DATE'));
+  } catch (error) {
+    console.warn(error);
+  }
+};
+
 export const deleteMovie = (id: number, activeButtonStart: string, sortStart: string) => async (
   dispatch: Dispatch<any>,
 ) => {

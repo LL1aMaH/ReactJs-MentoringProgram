@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, SyntheticEvent, useCallback } from 'react';
 
 import { Logo } from 'Components/Logo';
 
@@ -12,12 +12,15 @@ export type TMovieDetailsProps = {
 };
 
 export const MovieDetails = memo(function Preview({ film }: TMovieDetailsProps): JSX.Element {
+  const onError = useCallback((e: SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.src = poster;
+  }, []);
   return (
     <>
       <div
         className={styles.preview}
         style={{
-          backgroundImage: 'url(src/Assets/pictures/cover-image.jpg)',
+          backgroundImage: 'url(/src/Assets/pictures/cover-image.jpg)',
           filter: 'blur(5px)',
         }}
       />
@@ -27,7 +30,7 @@ export const MovieDetails = memo(function Preview({ film }: TMovieDetailsProps):
             <Logo />
           </div>
           <div className={styles.info}>
-            <img src={film?.poster_path || poster} alt="poster" />
+            <img src={film?.poster_path || poster} alt="poster" onError={onError} />
             <div className={styles.infoMovie}>
               <div className={styles.titleWithRating}>
                 <h1>{film?.title}</h1>

@@ -1,10 +1,12 @@
 import MainPage from 'Views/MainPage';
 import MovieDetails from 'Views/MovieDetailsPage';
 import NotFoundPage from 'Views/NotFoundPage';
+import SearchPage from 'Views/SearchPage';
 
 export enum EPath {
   Main = '/',
   NotFound = '/404',
+  MovieSearch = '/search/:searchValue',
   MovieDetailsPage = '/:movieID',
 }
 
@@ -21,13 +23,18 @@ export const ROUTES: TRoute[] = [
     exact: true,
   },
   {
-    path: EPath.NotFound,
-    component: NotFoundPage,
-    exact: false,
+    path: EPath.MovieSearch,
+    component: SearchPage,
+    exact: true,
   },
   {
     path: EPath.MovieDetailsPage,
     component: MovieDetails,
+    exact: false,
+  },
+  {
+    path: EPath.NotFound,
+    component: NotFoundPage,
     exact: false,
   },
 ];

@@ -9,14 +9,18 @@ import { SearchBox } from './components/SearchBox';
 
 import styles from './Preview.css';
 
-export const Preview = memo(function Preview(): JSX.Element {
+export type TPreviewProps = {
+  searchValue?: string;
+};
+
+export const Preview = memo(function Preview({ searchValue }: TPreviewProps): JSX.Element {
   const [showSuccessfulAddMovieModal, setShowSuccessfulAddMovieModal] = useState(false);
   return (
     <>
       <div
         className={styles.preview}
         style={{
-          backgroundImage: 'url(src/Assets/pictures/cover-image.jpg)',
+          backgroundImage: 'url(/src/Assets/pictures/cover-image.jpg)',
           filter: 'blur(5px)',
         }}
       />
@@ -30,7 +34,7 @@ export const Preview = memo(function Preview(): JSX.Element {
           {showSuccessfulAddMovieModal && <SuccessfulAddMovieModal />}
         </div>
         <p>FIND YOUR MOVIE</p>
-        <SearchBox className={styles.searchBox} />
+        <SearchBox className={styles.searchBox} searchValue={searchValue} />
       </div>
     </>
   );
