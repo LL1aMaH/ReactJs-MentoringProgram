@@ -12,14 +12,12 @@ import styles from './NavBar.css';
 export type TNavBarProps = {
   activeButton: string;
   handleClick: (e: SyntheticEvent) => void;
-  // sort: string;
   handleSelect: (value: string) => void;
 };
 
 export const NavBar = memo(function NavBar({
   activeButton,
   handleClick,
-  // sort,
   handleSelect,
 }: TNavBarProps): JSX.Element {
   return (
