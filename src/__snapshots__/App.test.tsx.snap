@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="preview"
+    style="background-image: url(/src/Assets/pictures/cover-image.jpg); filter: blur(5px);"
+  />
+  <div
+    class="previewContent"
+  >
+    <div
+      class="buttons"
+    >
+      <a
+        class="logo"
+        href="/"
+      >
+        <b>
+          netflix
+        </b>
+        roulette
+      </a>
+      <button
+        class="button button"
+        data-testid="addMovie"
+        tabindex="0"
+      >
+        + ADD MOVIE
+      </button>
+    </div>
+    <p>
+      FIND YOUR MOVIE
+    </p>
+    <div
+      class="searchBox searchBox"
+    >
+      <input
+        placeholder="What do you want to watch?"
+        value=""
+      />
+      <button
+        class="button button"
+        data-testid="button"
+        tabindex="0"
+      >
+        SEARCH
+      </button>
+    </div>
+  </div>
+  <div
+    class="navbar"
+  >
+    <div
+      class="buttons"
+    >
+      <button
+        class="button activeButton button"
+        tabindex="0"
+      >
+        ALL
+      </button>
+      <button
+        class="button button"
+        tabindex="0"
+      >
+        DOCUMENTARY
+      </button>
+      <button
+        class="button button"
+        tabindex="0"
+      >
+        COMEDY
+      </button>
+      <button
+        class="button button"
+        tabindex="0"
+      >
+        HORROR
+      </button>
+      <button
+        class="button button"
+        tabindex="0"
+      >
+        CRIME
+      </button>
+    </div>
+    <div
+      class="dropDown"
+    >
+      <span
+        class="label"
+      >
+        SORT BY
+      </span>
+      <div
+        class="container dropdown"
+      >
+        <button
+          class="selectButton select dropdownClose button"
+          data-testid="selectButton"
+          tabindex="0"
+        >
+          RELEASE DATE
+          <svg />
+        </button>
+        <ul
+          class="selectList close"
+        >
+          <li>
+            <button
+              class="option select selectOption"
+              type="button"
+            >
+              RELEASE DATE
+            </button>
+          </li>
+          <li>
+            <button
+              class="option select"
+              type="button"
+            >
+              RATING
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <span>
+      0 movies found
+    </span>
+    <div
+      class="list"
+    />
+    ;
+  </div>
+</DocumentFragment>
+`;

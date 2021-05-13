@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField renders correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <span />
+    <input
+      autocomplete="off"
+      type="text"
+      value="[object Object]"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputField renders correctly with error 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="warning"
+    >
+      error
+    </div>
+    <span />
+    <input
+      autocomplete="off"
+      type="text"
+      value="[object Object]"
+    />
+  </div>
+</DocumentFragment>
+`;

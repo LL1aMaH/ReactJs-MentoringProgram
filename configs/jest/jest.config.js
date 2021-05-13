@@ -22,12 +22,13 @@ module.exports = {
     '\\.svg$': path.join(mocksDir, 'svgMock.js'),
     ...getJestPathAliases(compilerOptions.paths),
   },
-  testPathIgnorePatterns: ["/node_modules/"],
+  testPathIgnorePatterns: ["/node_modules/", "<rootDir>/src/index.tsx"],
   collectCoverageFrom: [
     "<rootDir>/src/**/*.{ts,tsx}",
     "!<rootDir>/src/**/index.ts",
     "!<rootDir>/src/types/*",
     "!<rootDir>/src/consts/*",
+    "!<rootDir>/src/index.tsx"
   ],
   coverageThreshold: {
     global: {

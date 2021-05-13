@@ -21,7 +21,7 @@ const MainPage = (): JSX.Element => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMovies(activeButton, sort));
+    getMovies(activeButton, sort, dispatch);
   }, []);
 
   const movies = useSelector(getFilms);
@@ -29,7 +29,7 @@ const MainPage = (): JSX.Element => {
   const handleClick = useCallback(
     (e) => {
       setActiveButton(e.target.childNodes[0].data);
-      dispatch(getMovies(e.target.childNodes[0].data, sort));
+      getMovies(e.target.childNodes[0].data, sort, dispatch);
     },
     [sort],
   );
@@ -37,7 +37,7 @@ const MainPage = (): JSX.Element => {
   const handleSelect = useCallback(
     (value: string) => {
       setSort(value);
-      dispatch(getMovies(activeButton, value));
+      getMovies(activeButton, value, dispatch);
     },
     [activeButton],
   );

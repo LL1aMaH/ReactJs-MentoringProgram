@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="notFound"
+  >
+    <a
+      class="logo logoHeader"
+      href="/"
+    >
+      <b>
+        netflix
+      </b>
+      roulette
+    </a>
+    <div
+      class="info"
+    >
+      <p
+        class="paragraph"
+      >
+        Page Not Found
+      </p>
+      <img
+        alt="404"
+        class="logo404"
+        src="[object Object]"
+      />
+      <button
+        class="button button"
+        tabindex="0"
+      >
+        GO BACK TO HOME
+      </button>
+    </div>
+  </div>
+  <a
+    class="logo logoFooter"
+    href="/"
+  >
+    <b>
+      netflix
+    </b>
+    roulette
+  </a>
+</DocumentFragment>
+`;

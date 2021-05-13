@@ -19,7 +19,7 @@ const SearchPage = (): JSX.Element => {
   const { searchValue } = useParams<TRouteParams>();
 
   useEffect(() => {
-    dispatch(getSearchMovies(searchValue));
+    getSearchMovies(searchValue, dispatch);
   }, [searchValue]);
 
   const movies = useSelector(getFilms);

@@ -9,7 +9,7 @@ const useMultiSelect = ({ value, onChange }: TUseMultiSelectProps) => {
 
     if (!value.includes(newOption) && newOption) {
       value.push(newOption);
-    } else if (index > -1) {
+    } else {
       value.splice(index, 1);
     }
     onChange(value);

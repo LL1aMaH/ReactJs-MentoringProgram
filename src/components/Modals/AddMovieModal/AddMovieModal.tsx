@@ -48,7 +48,7 @@ const AddMovieModalComponent = ({
   const handleSubmitForm = (values: TAddMovie, { setSubmitting }: FormikHelpers<TAddMovie>) => {
     const correctValues = Object.assign(values, { genres: state });
     correctValues.runtime = +correctValues.runtime;
-    dispatch(addMovie(correctValues, activeButtonStart, sortStart));
+    addMovie(correctValues, activeButtonStart, sortStart, dispatch);
     setSubmitting(false);
     setShowSuccessfulAddMovieModal((visible) => !visible);
     onCancel();
@@ -158,7 +158,7 @@ export const AddMovieModal = ({
   }, [isOpen]);
   return (
     <>
-      <Button onClick={handleClose} className={className}>
+      <Button onClick={handleClose} className={className} testId="addMovie">
         + ADD MOVIE
       </Button>
       <Modal open={isOpen} onClose={handleClose}>

@@ -12,7 +12,7 @@ export type SuccessfulAddMovieModalComponentProps = {
 const SuccessfulAddMovieModalComponent = ({ onCancel }: SuccessfulAddMovieModalComponentProps) => {
   return (
     <div className={styles.modal}>
-      <Close onClick={onCancel} />
+      <Close onClick={onCancel} alt="close" />
       <div className={styles.check}>&#10004;</div>
       <h1>CONGRATULATIONS !</h1>
       <p>The movie has been added to database successfully</p>

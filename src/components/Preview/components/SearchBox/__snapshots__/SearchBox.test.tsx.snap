@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="searchBox"
+  >
+    <input
+      placeholder="What do you want to watch?"
+      value=""
+    />
+    <button
+      class="button button"
+      data-testid="button"
+      tabindex="0"
+    >
+      SEARCH
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchBox should correctly change input value 1`] = `
+<DocumentFragment>
+  <div
+    class="searchBox"
+  >
+    <input
+      placeholder="What do you want to watch?"
+      value="test"
+    />
+    <button
+      class="button button"
+      data-testid="button"
+      tabindex="0"
+    >
+      SEARCH
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchBox should correctly without change input value 1`] = `
+<DocumentFragment>
+  <div
+    class="searchBox"
+  >
+    <input
+      placeholder="What do you want to watch?"
+      value=""
+    />
+    <button
+      class="button button"
+      data-testid="button"
+      tabindex="0"
+    >
+      SEARCH
+    </button>
+  </div>
+</DocumentFragment>
+`;

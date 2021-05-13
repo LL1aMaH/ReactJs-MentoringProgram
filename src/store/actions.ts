@@ -32,7 +32,7 @@ const changeMainFilm = (payload: any) => ({
   payload,
 });
 
-export const getMovies = (genre: string, sort: string) => async (dispatch: Dispatch<any>) => {
+export const getMovies = async (genre: string, sort: string, dispatch: Dispatch<any>) => {
   const queryString = getURL(genre, sort);
   dispatch(fetchMovies());
   try {
@@ -47,7 +47,7 @@ export const getMovies = (genre: string, sort: string) => async (dispatch: Dispa
   }
 };
 
-export const getSearchMovies = (value: string) => async (dispatch: Dispatch<any>) => {
+export const getSearchMovies = async (value: string, dispatch: Dispatch<any>) => {
   const queryString = `${DEFAULT_URL}?search=${value}&searchBy=title`;
   try {
     const response = await fetch(queryString);
@@ -60,21 +60,27 @@ export const getSearchMovies = (value: string) => async (dispatch: Dispatch<any>
   }
 };
 
-export const deleteMovie = (id: number, activeButtonStart: string, sortStart: string) => async (
+export const deleteMovie = async (
+  id: number,
+  activeButtonStart: string,
+  sortStart: string,
   dispatch: Dispatch<any>,
 ) => {
   const queryString = `${DEFAULT_URL}/${id}`;
   try {
     const response = await fetch(queryString, { method: 'DELETE' });
     if (response.status === 204) {
-      dispatch(getMovies(activeButtonStart, sortStart));
+      getMovies(activeButtonStart, sortStart, dispatch);
     }
   } catch (error) {
     console.warn(error);
   }
 };
 
-export const addMovie = (values: TAddMovie, activeButtonStart: string, sortStart: string) => async (
+export const addMovie = async (
+  values: TAddMovie,
+  activeButtonStart: string,
+  sortStart: string,
   dispatch: Dispatch<any>,
 ) => {
   const queryString = `${DEFAULT_URL}`;
@@ -85,18 +91,19 @@ export const addMovie = (values: TAddMovie, activeButtonStart: string, sortStart
       body: JSON.stringify(values),
     });
     if (response.status === 201) {
-      dispatch(getMovies(activeButtonStart, sortStart));
+      getMovies(activeButtonStart, sortStart, dispatch);
     }
   } catch (error) {
     console.warn(error);
   }
 };
 
-export const editMovie = (
+export const editMovie = async (
   values: TAddMovie,
   activeButtonStart: string,
   sortStart: string,
-) => async (dispatch: Dispatch<any>) => {
+  dispatch: Dispatch<any>,
+) => {
   const queryString = `${DEFAULT_URL}`;
   try {
     const response = await fetch(queryString, {
@@ -105,14 +112,14 @@ export const editMovie = (
       body: JSON.stringify(values),
     });
     if (response.status === 200) {
-      dispatch(getMovies(activeButtonStart, sortStart));
+      getMovies(activeButtonStart, sortStart, dispatch);
     }
   } catch (error) {
     console.warn(error);
   }
 };
 
-export const movieDetails = (id: string) => async (dispatch: Dispatch<any>) => {
+export const movieDetails = async (id: string, dispatch: Dispatch<any>) => {
   const queryString = `${DEFAULT_URL}/${id}`;
   try {
     const response = await fetch(queryString);
