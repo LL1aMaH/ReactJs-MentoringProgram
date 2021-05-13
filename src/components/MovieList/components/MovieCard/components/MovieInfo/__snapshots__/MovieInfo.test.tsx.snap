@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieInfo renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="info"
+    >
+      <p
+        class="title"
+      >
+        title
+      </p>
+      <p
+        class="genres"
+      />
+    </div>
+    <p
+      class="year"
+    >
+      1234
+    </p>
+  </div>
+</DocumentFragment>
+`;

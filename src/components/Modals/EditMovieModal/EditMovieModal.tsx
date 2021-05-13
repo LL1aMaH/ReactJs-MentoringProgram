@@ -52,13 +52,13 @@ const EditMovieModalComponent = ({
   const handleSubmitForm = (values: TMovie, { setSubmitting }: FormikHelpers<TMovie>) => {
     const correctValues = Object.assign(values, { genres: state });
     correctValues.runtime = +correctValues.runtime;
-    dispatch(editMovie(correctValues, activeButtonStart, sortStart));
+    editMovie(correctValues, activeButtonStart, sortStart, dispatch);
     setSubmitting(false);
     onCancel();
   };
   return (
     <div className={styles.modal}>
-      <Close onClick={onCancel} />
+      <Close onClick={onCancel} testId="svg" />
       <p>EDIT MOVIE</p>
 
       <Formik

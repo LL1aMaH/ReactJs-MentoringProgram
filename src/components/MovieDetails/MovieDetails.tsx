@@ -13,7 +13,7 @@ export type TMovieDetailsProps = {
 
 export const MovieDetails = memo(function Preview({ film }: TMovieDetailsProps): JSX.Element {
   const onError = useCallback((e: SyntheticEvent<HTMLImageElement, Event>) => {
-    e.currentTarget.src = poster;
+    e.currentTarget.src = '/src/assets/pictures/Movie_040311_3.jpg';
   }, []);
   return (
     <>

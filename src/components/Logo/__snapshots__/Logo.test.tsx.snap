@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage renders correctly 1`] = `
+<DocumentFragment>
+  <a
+    class="logo"
+    href="/"
+  >
+    <b>
+      netflix
+    </b>
+    roulette
+  </a>
+</DocumentFragment>
+`;

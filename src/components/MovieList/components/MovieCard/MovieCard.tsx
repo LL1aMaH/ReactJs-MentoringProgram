@@ -35,7 +35,7 @@ export const MovieCard = memo(function MovieCard({ film }: MovieCardProps): JSX.
   }, []);
 
   const onError = useCallback((e: SyntheticEvent<HTMLImageElement, Event>) => {
-    e.currentTarget.src = poster;
+    e.currentTarget.src = '/src/assets/pictures/Movie_040311_3.jpg';
   }, []);
 
   const redirectToMovieDetails = useCallback(() => {
@@ -50,10 +50,10 @@ export const MovieCard = memo(function MovieCard({ film }: MovieCardProps): JSX.
       <div className={styles.icon}>
         &#8230;
         <div className={styles.buttons}>
-          <Button className={styles.button} onClick={editHandleClick}>
+          <Button className={styles.button} onClick={editHandleClick} testId="Edit">
             Edit
           </Button>
-          <Button className={styles.button} onClick={deleteHandleClick}>
+          <Button className={styles.button} onClick={deleteHandleClick} testId="Delete">
             Delete
           </Button>
         </div>

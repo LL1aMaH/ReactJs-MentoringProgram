@@ -18,7 +18,7 @@ type TRouteParams = {
   movieID: string;
 };
 
-const MainPage = (): JSX.Element => {
+const MovieDetailsPage = (): JSX.Element => {
   const { activeButtonStart, sortStart } = useSelector(getStartButton);
   const [activeButton, setActiveButton] = useState<string>(activeButtonStart);
   const [sort, setSort] = useState<string>(sortStart);
@@ -27,8 +27,8 @@ const MainPage = (): JSX.Element => {
   const { movieID } = useParams<TRouteParams>();
 
   useEffect(() => {
-    dispatch(movieDetails(movieID));
-    dispatch(getMovies(activeButton, sort));
+    movieDetails(movieID, dispatch);
+    getMovies(activeButton, sort, dispatch);
   }, [movieID]);
 
   const film = useSelector(getFilmsDetails);
@@ -37,7 +37,7 @@ const MainPage = (): JSX.Element => {
   const handleClick = useCallback(
     (e) => {
       setActiveButton(e.target.childNodes[0].data);
-      dispatch(getMovies(e.target.childNodes[0].data, sort));
+      getMovies(e.target.childNodes[0].data, sort, dispatch);
     },
     [sort],
   );
@@ -45,7 +45,7 @@ const MainPage = (): JSX.Element => {
   const handleSelect = useCallback(
     (value: string) => {
       setSort(value);
-      dispatch(getMovies(activeButton, value));
+      getMovies(activeButton, value, dispatch);
     },
     [activeButton],
   );
@@ -60,4 +60,4 @@ const MainPage = (): JSX.Element => {
   );
 };
 
-export default MainPage;
+export default MovieDetailsPage;

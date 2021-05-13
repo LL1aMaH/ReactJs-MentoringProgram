@@ -1,0 +1,229 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should redirect correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="icon"
+    >
+      …
+      <div
+        class="buttons"
+      >
+        <button
+          class="button button"
+          data-testid="Edit"
+          tabindex="0"
+        >
+          Edit
+        </button>
+        <button
+          class="button button"
+          data-testid="Delete"
+          tabindex="0"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <img
+      alt="poster"
+      src="[object Object]"
+    />
+    <div
+      class="card"
+    >
+      <div
+        class="info"
+      >
+        <p
+          class="title"
+        >
+          Guardians of the Galaxy Vol. 3
+        </p>
+        <p
+          class="genres"
+        />
+      </div>
+      <p
+        class="year"
+      >
+        2020
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MovieCard should renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="icon"
+    >
+      …
+      <div
+        class="buttons"
+      >
+        <button
+          class="button button"
+          data-testid="Edit"
+          tabindex="0"
+        >
+          Edit
+        </button>
+        <button
+          class="button button"
+          data-testid="Delete"
+          tabindex="0"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <img
+      alt="poster"
+      src="https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg"
+    />
+    <div
+      class="card"
+    >
+      <div
+        class="info"
+      >
+        <p
+          class="title"
+        >
+          Guardians of the Galaxy Vol. 3
+        </p>
+        <p
+          class="genres"
+        />
+      </div>
+      <p
+        class="year"
+      >
+        2020
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MovieCard should renders delete modal correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="icon"
+    >
+      …
+      <div
+        class="buttons"
+      >
+        <button
+          class="button button"
+          data-testid="Edit"
+          tabindex="0"
+        >
+          Edit
+        </button>
+        <button
+          class="button button"
+          data-testid="Delete"
+          tabindex="0"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <img
+      alt="poster"
+      src="[object Object]"
+    />
+    <div
+      class="card"
+    >
+      <div
+        class="info"
+      >
+        <p
+          class="title"
+        >
+          Guardians of the Galaxy Vol. 3
+        </p>
+        <p
+          class="genres"
+        />
+      </div>
+      <p
+        class="year"
+      >
+        2020
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MovieCard should renders edit modal correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="icon"
+    >
+      …
+      <div
+        class="buttons"
+      >
+        <button
+          class="button button"
+          data-testid="Edit"
+          tabindex="0"
+        >
+          Edit
+        </button>
+        <button
+          class="button button"
+          data-testid="Delete"
+          tabindex="0"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <img
+      alt="poster"
+      src="https://image.tmdb.org/t/p/w500/ldoY4fTZkGISMidNw60GHoNdgP8.jpg"
+    />
+    <div
+      class="card"
+    >
+      <div
+        class="info"
+      >
+        <p
+          class="title"
+        >
+          Guardians of the Galaxy Vol. 3
+        </p>
+        <p
+          class="genres"
+        />
+      </div>
+      <p
+        class="year"
+      >
+        2020
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

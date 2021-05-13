@@ -26,7 +26,7 @@ const DeleteMovieModalComponent = ({ onCancel, id }: DeleteMovieModalComponentPr
   const dispatch = useDispatch();
   const { activeButtonStart, sortStart } = useSelector(getStartButton);
   const handleClick = useCallback(() => {
-    dispatch(deleteMovie(id, activeButtonStart, sortStart));
+    deleteMovie(id, activeButtonStart, sortStart, dispatch);
     onCancel();
   }, [deleteMovie]);
 

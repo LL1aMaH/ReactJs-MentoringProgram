@@ -45,13 +45,13 @@ export const Modal = memo(function Modal(props: TModalProps): JSX.Element {
     const root = document.body;
 
     if (open) {
-      root?.classList.add(styles.scrollLock);
+      root.classList.add(styles.scrollLock);
     } else {
-      root?.classList.remove(styles.scrollLock);
+      root.classList.remove(styles.scrollLock);
     }
 
     return () => {
-      root?.classList.remove(styles.scrollLock);
+      root.classList.remove(styles.scrollLock);
     };
   }, [open]);
 

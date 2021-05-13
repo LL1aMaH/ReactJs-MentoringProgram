@@ -29,7 +29,7 @@ export const SearchBox = memo(function SearchBox(props: SearchBoxProps): JSX.Ele
   return (
     <div className={searchBoxClassName}>
       <input placeholder="What do you want to watch?" value={searchValue} onChange={handleChange} />
-      <Button className={styles.button} onClick={handleClick}>
+      <Button className={styles.button} onClick={handleClick} testId="button">
         SEARCH
       </Button>
     </div>
