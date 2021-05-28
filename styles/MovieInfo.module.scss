@@ -1,0 +1,37 @@
+#p1, #p2 {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-font-color);
+  padding-top: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.year {
+  border: 1px solid var(--primary-font-color);
+  border-radius: 4px;
+  padding: 4px;
+  height: 28px;
+}
+
+.genres {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+}
